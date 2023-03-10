@@ -27,7 +27,9 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb+srv://kiduspaulos:kgYKmBaGS5VJ75e@cluster0.jte4y.mongodb.net/modul-1?retryWrites=true&w=majority');
 app.use(express.static(path.join(__dirname, 'public')));
 // CORS - (Cross-origin resource sharing) hantering
-app.use(cors());
+app.use(cors({
+  origin: 'http://loacalhost/19005',
+}));
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error. Det lyckades inte:'));
