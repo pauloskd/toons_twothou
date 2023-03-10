@@ -28,7 +28,7 @@ mongoose.connect('mongodb+srv://kiduspaulos:kgYKmBaGS5VJ75e@cluster0.jte4y.mongo
 app.use(express.static(path.join(__dirname, 'public')));
 // CORS - (Cross-origin resource sharing) hantering
 app.use(cors({
-  origin: 'http://loacalhost:19006',
+  origin: 'http://localhost:19006',
 }));
 
 var db = mongoose.connection;
